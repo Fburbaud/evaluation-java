@@ -18,7 +18,7 @@ public class Main {
 		System.out.println(joueur1);
 		
 		//armer le joueur 1 avec l'épée excalibur
-		joueur1.changerArme(excalibur);
+		joueur1.setArme(excalibur);
 		System.out.println(joueur1);
 		
 		System.out.println("---------");
@@ -29,7 +29,7 @@ public class Main {
 		System.out.println(joueur2);
 		
 		//armer le joueur 1 avec le marteau
-		joueur2.changerArme(marteau);
+		joueur2.setArme(marteau);
 		System.out.println(joueur2);
 		
 		System.out.println("-----------");
