@@ -42,6 +42,7 @@ public class Joueur {
 		this.force = force;
 	}
 	
+	//setter de force avec un chiffre aléatoire
 	public void setForce() {
 		int fmax = 10;
 		int fmin = 5;
@@ -74,18 +75,22 @@ public class Joueur {
 		}
 	}
 	
+	//méthode pour désarmer
 	public void desarmer(Joueur cible) {
 		cible.arme = null;
 	}
 	
+	//méthode pour changer d'arme
 	public void changerArme(Arme arme) {
 		this.arme = arme;
 	}
 	
+	//méthode pour le calcule de la puissance d'attaque
 	private int puissanceAttaque() {
 		return this.force*this.sante*this.experience*this.arme.getPuissance();
 	}
 	
+	//methode pour attaquer
 	public String attaque(Joueur cible) {
 		if (this.sante == 0 || cible.sante == 0){
 			return "Un joueur mort ne peut attaquer ou être attaqué! Non mais!";
@@ -116,6 +121,5 @@ public class Joueur {
 			return "Match nul!";
 		}
 			
-	}	
-
+	}
 }
