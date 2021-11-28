@@ -9,7 +9,7 @@ public class Joueur {
 	private int experience = 1;
 	private Arme arme;
 	
-	public Joueur(String nom, int force) {
+	public Joueur(String nom) {
 		this.nom = nom;
 		Random rand = new Random();
 		this.force = rand.nextInt(6)+5;
@@ -106,5 +106,12 @@ public class Joueur {
 		j2.experience ++;
 	}
 
+	public boolean etreMort() {
+		if(sante == 0) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 	
 }
