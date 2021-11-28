@@ -1,5 +1,7 @@
 package evalJeu;
 
+import java.util.ArrayList;
+
 public class Arme {
 	private String nom;
 	private TypeArme type;
@@ -39,5 +41,4 @@ public class Arme {
 	public String toString() {
 		return "Arme : " + nom + ", puissance = " + puissance + ", type d'arme = " + type + ".";
 	}
-	
 }

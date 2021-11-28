@@ -1,5 +1,7 @@
 package evalJeu;
 
+import java.util.ArrayList;
+
 public class Joueur {
 	private String nom;
 	private int sante;
@@ -120,6 +122,15 @@ public class Joueur {
 		}else {
 			return "Match nul!";
 		}
-			
 	}
+	
+	//methode pour choisir son arme à partir de la liste d'armes qui peut être évolutive
+	public void choisirArme(ArrayList<Arme> array, int pick) {
+		for (int i = 0; i < array.size(); i++) {
+			if(pick == (i+1)) {
+				this.setArme(array.get(pick-1));
+			}
+		}
+	}
+	
 }
